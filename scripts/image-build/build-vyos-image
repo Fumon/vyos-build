@@ -653,6 +653,14 @@ DOCUMENTATION_URL="{build_config['documentation_url']}"
         apt_pin = f"""Package: *
 Pin: release n={build_config['release_train']}
 Pin-Priority: 600
+
+Package: mlnx-tools
+Pin: origin "linux.mellanox.com"
+Pin-Priority: 1001
+
+Package: mlnx-ofed-kernel-utils
+Pin: origin "linux.mellanox.com"
+Pin-Priority: 1001
 """
 
         with open(defaults.VYOS_PIN_FILE, 'w') as f:
