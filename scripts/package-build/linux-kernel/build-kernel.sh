@@ -55,7 +55,7 @@ fi
 
 echo "I: make vyos_defconfig"
 # Select Kernel configuration - currently there is only one
-make vyos_defconfig
+make -j24 vyos_defconfig
 
 echo "I: Generate environment file containing Kernel variable"
 EPHEMERAL_KEY="/tmp/ephemeral.key"
